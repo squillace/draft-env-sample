@@ -1,14 +1,12 @@
 [environments]
-  [environments.development]
+  [environments.debug]
     name = "example-nodejs"
     namespace = "default"
     override-ports = ["8080:8080"]
     chart = "javascript"
     dockerfile = "Dockerfile"
-
-
-  [environments.debug]
-    name = "example-nodejs-debug"
+  [environments.development]
+    name = "remote-nodejs-debug"
     namespace = "default"
     override-ports = ["8080:8080", "9229:9229"]
     chart = "node-debug"
