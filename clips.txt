@@ -1,0 +1,3 @@
+/*
+  var responseString = "Hello KubeCon, I'm Node.js on AKS in WestEurope! here's mongo at " + process.env.MONGO_HOST + " with the USERNAME: " + process.env.MONGO_USERNAME + " and at PORT:" + process.env.MONGO_PORT;
+*/ 

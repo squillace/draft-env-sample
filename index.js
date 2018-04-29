@@ -3,7 +3,8 @@ const port = process.env.PORT || 8080;
 
 const requestHandler = (request, response) => {
   console.log(request.url);
-  var responseString = "Hello World, I'm Node.js on minikube!";
+  var responseString = "Hello World, I'm Node.js running in Dublin!";
+
   response.end(responseString);
 }
 

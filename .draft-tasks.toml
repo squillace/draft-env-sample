@@ -1,0 +1,10 @@
+[pre-up]
+hello = "echo PRIOR TO BUILDING AND DEPLOYING"
+mysql = "echo helm install mysql --name mysql-service"
+
+[post-deploy]
+"friendly msg for no reason" = "echo setting up some stuff in my container"
+"sync database" = "echo MIGRATE db set up"
+
+[cleanup]
+"delete mysql" = "echo DELETING mysql-service --purge"

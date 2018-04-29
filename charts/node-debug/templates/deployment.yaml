@@ -24,3 +24,15 @@ spec:
         - containerPort: 9229
         resources:
 {{ toYaml .Values.resources | indent 12 }}
+{{- if .Values.serviceCatalogEnv }}
+        env:
+{{- range $index, $value := .Values.serviceCatalogEnv }}
+{{- range $key := $value.vars }}
+          - name: {{ $value.name | upper }}_{{ . | upper }}
+            valuefrom:
+              secretKeyRef:
+                name: {{ $value.name }}
+                key: {{ . }}
+{{- end }}
+{{- end }}
+{{- end }}
