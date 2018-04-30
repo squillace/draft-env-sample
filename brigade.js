@@ -20,7 +20,7 @@ events.on("push", (brigadeEvent, project) => {
     console.log(`==> gitHub webook (${brigConfig.get("branch")}) with commit ID ${brigConfig.get("gitSHA")}`)
     console.log(`==> Date ${brigConfig.get("buildDate")}`)
 
-    // setup brigade jobs
+    // setup brigade jobs properly
     var docker = new Job("job-runner-docker")
     var helm = new Job("job-runner-helm")
     dockerJobRunner(brigConfig, docker)
