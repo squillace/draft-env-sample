@@ -3,7 +3,7 @@ const port = process.env.PORT || 8080;
 
 const requestHandler = (request, response) => {
   console.log(request.url);
-  var responseString = "Hello World, I'm Node.js running in Dublin!";
+  var responseString = "Hello World, I'm Node.js!";
 
   response.end(responseString);
 }
